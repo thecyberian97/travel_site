@@ -1,9 +1,9 @@
 <!-- Navbar -->
 <nav style="z-index: 100;" class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
     <!-- Container wrapper -->
-    <div class="container-fluid">
+    <div style="padding: 5px;" class="container-fluid">
       <!-- Toggle button -->
-      <button
+      <button 
         data-mdb-collapse-init
         class="navbar-toggler"
         type="button"
@@ -17,18 +17,14 @@
       </button>
   
       <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div style="justify-content: center;" class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
-          <img style="width: 50%;height: 50%;"
-            src="/assets/photos/remove.png"
-            height="15"
-            alt="MDB Logo"
-            loading="lazy"
-          />
-        </a>
+
         <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul style="font-size: 18px;margin-right: 0px!important;" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/packages">Packages</a>
           </li>
@@ -47,17 +43,25 @@
       <!-- Collapsible wrapper -->
   
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
+        <button mat-menu-item (click)="navigateTo('/home')">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
         </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voice mail</span>
+        <button mat-menu-item (click)="navigateTo('/packages')">
+          <mat-icon>near_me</mat-icon>
+          <span>Packages</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="navigateTo('/services')">
           <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
+          <span>Services</span>
+        </button>
+        <button mat-menu-item (click)="navigateTo('/about-us')">
+          <mat-icon>record_voice_over</mat-icon>
+          <span>About Us</span>
+        </button>
+        <button mat-menu-item (click)="navigateTo('/contact-us')">
+          <mat-icon>question_answer</mat-icon>
+          <span>Contact us</span>
         </button>
       </mat-menu>
       <!-- Right elements -->

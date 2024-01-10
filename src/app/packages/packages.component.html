@@ -1,8 +1,7 @@
 <div class="popular-pack  container-fluid">
     <div class="container">
-        <div class="session-title row">
-            <h2>Popular packages</h2>
-            <p>when an unknown printer took a galley of type and scrambled it to make</p>
+        <div style="padding: 0px;" class="session-title row">
+            <h2>Our packages</h2>
         </div>
         <div class="row pack-row">
             <div *ngFor="let package of packages" [routerLink]="[ '/package-details',package.id]" class="col-lg-4 col-md-6 col-sm-6">
